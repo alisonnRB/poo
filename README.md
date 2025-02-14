@@ -6,11 +6,11 @@ Este repositório contém os códigos, exemplos e materiais utilizados na discip
 
 A Programação Orientada a Objetos (POO) é um paradigma de programação que utiliza conceitos como classes, objetos, herança, polimorfismo e encapsulamento para estruturar e organizar o código de maneira eficiente e reutilizável.
 
-## 🔗 Acesse o AVA da Disciplina
+## 🔗 Materiais da disciplina
 
 Para mais informações, materiais de estudo e atividades, acesse o Ambiente Virtual de Aprendizagem (AVA) da disciplina através do link abaixo:
 
-[🔗 Acessar ao Moodle]([COLOQUE_AQUI_O_LINK_DO_AVA](https://presencial.ifrs.edu.br/course/view.php?id=911))
+[🔗 Acesso ao Moodle](https://presencial.ifrs.edu.br/course/view.php?id=911))
 
 ## 📂 Conteúdo do Repositório
 
