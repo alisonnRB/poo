@@ -1,4 +1,4 @@
-import java.util.Random;
+import java.util.Random;	// importar a classe responsável pela geração de números aleatórios
 
 class Produto {
 	String nome;	
@@ -21,12 +21,15 @@ class Produto {
 			this.precoCompra = precoCompra;
 		else 
 			System.out.println("Preço inválido");
-			
-		this.precoVenda = precoCompra * 1.5f;	// defini todos os produtos com um lucro de 50%
 		
+		// criando uma instancia da classe Random, que fornecerá acesso aos métodos que geram numeros aleatórios
 		Random gerador = new Random();
+		// codigo = gerador.nextInt();	// gera um número dentro do que um int suporte
+		// gerador.nextInt(100);	// gera um numero entre 0 e 100
+		codigo = gerador.nextInt(100, 1000);	// gera um numero entre 100 e 1000
 		
-		codigo = gerador.nextInt(100);
+		this.precoVenda = precoCompra * 1.5f;	// define todos os produtos com um lucro de 50% 
+		
 	}	
 	
 	/* construtor2: obriga a informar o nome e o preco de compra e preco de venda do produto

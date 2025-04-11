@@ -2,8 +2,9 @@ class Conta {
 	// atributos da classe
 	String nome; // nome do cliente
 	float saldo;	// saldo do cliente
+	Data abertura;	// indica quando a conta do cliente foi aberta - exemplo de composição/
 	
-	public Conta (String nome) {
+	public Conta (String nome, Data dt) {
 		
 		// validação do nome do cliente
 		// apenas nomes com mais de 5 caracteres serão aceitos
@@ -18,6 +19,8 @@ class Conta {
 			
 		}
 		
+		this.abertura = dt;	// inicializando a data de abertura da conta
+		
 		saldo = 0;	// ao abrir a conta, o saldo está zerado
 	}
 	
@@ -25,16 +28,22 @@ class Conta {
 	public void imprimirExtrato(){
 		System.out.printf("Extrato de conta \n");
 		System.out.printf("Cliente: %s \n", nome);
+		System.out.printf("Conta aberta em %s \n", abertura.escreverPorExtenso() );
 		System.out.printf("Saldo: %.2f \n", saldo);
 		System.out.printf("----------------\n");
 	}
 	
 	public static void main(String args[]) {
+		
+		// criando uma variavel para armazenar a data que Pablo abriu a conta
+		Data d1 = new Data(8 , 3, 2021);
+		
 		// criando a conta do Pablo
-		Conta cta1 = new Conta("Pablo da Silva");
+		// agora é obrigatório passar um argumento do tipo data para criar uma conta
+		Conta cta1 = new Conta("Pablo da Silva", d1);
 		
 		// criando a conta da Júlia
-		Conta cta2 = new Conta("Júlia Snidze");
+		Conta cta2 = new Conta("Júlia Snidze", new Data(41, 8, 2019) );
 		
 		// fazendo operações de deposito e saque na conta do Pablo
 		cta1.depositar(200);
